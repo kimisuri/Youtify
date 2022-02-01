@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Botify</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="0" colspan="5">
+       <widget class="QListWidget" name="music_list">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Typewriter</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget
+                        {
+                            border : 1px solid black;
+                            background : #eeeeee;
+                            border-radius: 10px;
+                                            }
+                     QListWidget QScrollBar
+                        {
+                    background : #959995;
+                        }
+                            QListView::item:selected
+                        {
+                            border : 2px solid black;
+                            background : #999999;
+                        }</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="5">
+       <widget class="QSlider" name="music_duration">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSlider{
+                                background: #E3DEE2;
+                            }
+                            QSlider::groove:horizontal {  
+                                height: 10px;
+                                margin: 0px;
+                                border-radius: 5px;
+                                background: #B0AEB1;
+                            }
+                            QSlider::handle:horizontal {
+                                background: #fff;
+                                border: 1px solid #E3DEE2;
+                                width: 17px;
+                                margin: -5px 0; 
+                                border-radius: 8px;
+                            }
+                            QSlider::sub-page:qlineargradient {
+                                background: #000;
+                                border-radius: 5px;
+                            }</string>
+        </property>
+        <property name="maximum">
+         <number>9999</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="pause_btn">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>130</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Typewriter</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+                        background-color: #bcbcbc;
+                        border-style: solid;
+                        border-radius: 60px;
+                    }
+                    QPushButton:pressed {
+                        background-color: #DDA0DD;
+                        border-style: inset;
+                    }
+</string>
+        </property>
+        <property name="text">
+         <string>||</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="previous_btn">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>130</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Typewriter</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+                        background-color: #bcbcbc;
+                        border-style: solid;
+                        border-radius: 60px;
+                    }
+                    QPushButton:pressed {
+                        background-color: #DDA0DD;
+                        border-style: inset;
+                    }</string>
+        </property>
+        <property name="text">
+         <string>ᐊᐊ</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="play_btn">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>130</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Typewriter</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+                        background-color: #bcbcbc;
+                        border-style: solid;
+                        border-radius: 60px;
+                    }
+                    QPushButton:pressed {
+                        background-color: #DDA0DD;
+                        border-style: inset;
+                    }</string>
+        </property>
+        <property name="text">
+         <string>ᐅ</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="next_btn">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>130</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Typewriter</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+                        background-color: #bcbcbc;
+                        border-style: solid;
+                        border-radius: 60px;
+                    }
+                    QPushButton:pressed {
+                        background-color: #DDA0DD;
+                        border-style: inset;
+                    }</string>
+        </property>
+        <property name="text">
+         <string>ᐅᐅ</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QPushButton" name="get_track">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>130</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Typewriter</family>
+          <pointsize>14</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+                        background-color: #bcbcbc;
+                        border-style: solid;
+                        border-radius: 60px;
+                    }
+                    QPushButton:pressed {
+                        background-color: #DDA0DD;
+                        border-style: inset;
+                    }
+</string>
+        </property>
+        <property name="text">
+         <string>Открыть</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>750</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="playlist_menu">
+    <property name="title">
+     <string>Плейлист</string>
+    </property>
+    <addaction name="create_file"/>
+    <addaction name="change_playlist"/>
+    <addaction name="separator"/>
+    <addaction name="delete_playlist"/>
+   </widget>
+   <widget class="QMenu" name="track_menu">
+    <property name="title">
+     <string>Трек</string>
+    </property>
+    <widget class="QMenu" name="add_menu">
+     <property name="font">
+      <font>
+       <family>Lucida Sans Typewriter</family>
+      </font>
+     </property>
+     <property name="title">
+      <string>Добавить</string>
+     </property>
+     <addaction name="add_from_spoty"/>
+     <addaction name="add_from_youtube"/>
+     <addaction name="add_from_disk_3"/>
+    </widget>
+    <addaction name="add_menu"/>
+    <addaction name="separator"/>
+    <addaction name="delete_track"/>
+   </widget>
+   <addaction name="playlist_menu"/>
+   <addaction name="track_menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="create_file">
+   <property name="text">
+    <string>Создать</string>
+   </property>
+  </action>
+  <action name="export_file">
+   <property name="text">
+    <string>Экспортировать</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Добавить из файла</string>
+   </property>
+  </action>
+  <action name="delete_track">
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+  </action>
+  <action name="add_from_spoty">
+   <property name="text">
+    <string>из Spotify</string>
+   </property>
+  </action>
+  <action name="add_from_disk">
+   <property name="text">
+    <string>с диска</string>
+   </property>
+  </action>
+  <action name="add_from_youtube">
+   <property name="text">
+    <string>из Youtube</string>
+   </property>
+  </action>
+  <action name="import_file">
+   <property name="text">
+    <string>Импортировать</string>
+   </property>
+  </action>
+  <action name="change_playlist">
+   <property name="text">
+    <string>Переключить</string>
+   </property>
+  </action>
+  <action name="add_from_disk_2">
+   <property name="text">
+    <string>с диска</string>
+   </property>
+  </action>
+  <action name="delete_playlist">
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+  </action>
+  <action name="add_from_disk_3">
+   <property name="text">
+    <string>с диска</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
